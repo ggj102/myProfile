@@ -11,6 +11,10 @@ import { faGithubSquare } from "@fortawesome/free-brands-svg-icons"
 import { useSelector } from 'react-redux';
 
 const Content = styled.div`
+    a:link{text-decoration: none; color:${(props)=> props.color};}
+    a:visited{text-decoration: none; color:${(props)=> props.color};}
+    a:active{text-decoration: none; color:${(props)=> props.color};}
+    a:hover{text-decoration: none; color:${(props)=> props.color};}
     .portfolio{
         padding: 150px 85px 0 85px;
         margin: 0 auto;
@@ -155,9 +159,23 @@ const Content = styled.div`
 `
 
 function Portfolio(){
-
     const imgArr = [Pf1,Pf2,Pf3,Pf4,Pf5];
-    const nameArr = ["BookSearch","MovieSearch","ShoppingMall","WeatherInfo","MyProfile"]
+    const nameArr = ["BookSearch","MovieSearch","ShoppingMall","WeatherInfo","MyProfile"];
+    const gitAddress = [
+        "https://github.com/ggj102/bookSearch",
+        "https://github.com/ggj102/movieSearch",
+        "https://github.com/ggj102/portfolio_shoppingmall"
+    ];
+    const webAddress = [
+        "https://book-search-ochre.vercel.app/",
+        "https://movie-search-one.vercel.app/",
+        "https://portfolio-shoppingmall.vercel.app/"
+    ];
+    const notionAddress = [
+        "https://www.notion.so/BookSearch-3ab5402c3b6048958812f7ba2c0acc15",
+        "https://www.notion.so/MovieSearch-7fc62b3721dd457b8a9fa10b2b6cba6b",
+        "https://www.notion.so/ShoppingMall-3952bf07c0ca4e07857ad8c8956af294"
+    ]
     const color = useSelector(state => state.color);
 
     const pfList = imgArr.map((val,idx)=>{
@@ -168,13 +186,19 @@ function Portfolio(){
                     <div className="pf_title">{nameArr[idx]}</div>
                     <div className="icon_area">
                         <div className="icon">
-                            <FontAwesomeIcon icon={faGithubSquare} size="2x"/>
+                            <a href={gitAddress[idx]} target="_blank">
+                                <FontAwesomeIcon icon={faGithubSquare} size="2x"/>
+                            </a> 
                         </div>
                         <div className="icon_center">
-                            <FontAwesomeIcon icon={faHome} size="2x"/>
+                            <a href={webAddress[idx]} target="_blank">
+                                <FontAwesomeIcon icon={faHome} size="2x"/>
+                            </a> 
                         </div>
                         <div className="icon">
-                            <FontAwesomeIcon icon={faFileAlt} size="2x"/>
+                            <a href={notionAddress[idx]} target="_blank">
+                                <FontAwesomeIcon icon={faFileAlt} size="2x"/>
+                            </a> 
                         </div>
                     </div>
                 </div>

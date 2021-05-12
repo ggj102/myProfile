@@ -1,17 +1,22 @@
 import styled from 'styled-components';
+import Link from 'next/link';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faGithubSquare } from "@fortawesome/free-brands-svg-icons"
+import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
-import Book1 from "../../static/profile_img/book1.png"
-import Book2 from "../../static/profile_img/book2.png"
-import Book3 from "../../static/profile_img/book3.png"
-import Sbs from "../../static/profile_img/sbs.png"
-import Fast from "../../static/profile_img/fast.png"
-import Me from "../../static/profile_img/me2.png"
-import About from "../../static/profile_img/about_me.png"
+import Book1 from "../../static/profile_img/book1.png";
+import Book2 from "../../static/profile_img/book2.png";
+import Book3 from "../../static/profile_img/book3.png";
+import Sbs from "../../static/profile_img/sbs.png";
+import Fast from "../../static/profile_img/fast.png";
+import Me from "../../static/profile_img/me2.png";
+import About from "../../static/profile_img/about_me.png";
 import { useSelector } from 'react-redux';
 
 const Content = styled.div`
+    a:link{text-decoration: none; color:${(props)=> props.color};}
+    a:visited{text-decoration: none; color:${(props)=> props.color};}
+    a:active{text-decoration: none; color:${(props)=> props.color};}
+    a:hover{text-decoration: none; color:${(props)=> props.color};}
     ul{
         list-style:none;
         margin: 0;
@@ -68,14 +73,14 @@ const Content = styled.div`
         margin-left: 10px;
     }
     .me{
-        border: 20px solid rgba(0,0,0,0.9);
+        border: 20px solid ${(props)=> props.out};
         height: 340px;
         width: 340px;
         border-radius: 50%;
     }
     .me img{
         width: 300px;
-        border: 20px solid #100e17;
+        border: 20px solid ${(props)=> props.in};
         margin: 0 auto;
         border-radius: 50%;
         max-width: 100%;
@@ -117,7 +122,7 @@ const Content = styled.div`
     .skill{
         padding: 10px 30px;
         box-sizing:border-box;
-        border: 1px solid #202026;
+        border: 1px solid ${(props)=> props.border};;
         border-radius: 4px;
         background-color: ${(props)=> props.background};
         font-size: 15px;
@@ -150,7 +155,7 @@ const Content = styled.div`
         width: 47%;
     }
     .info{
-        border: 1px solid #202026;
+        border: 1px solid ${(props)=> props.border};
         background-color: ${(props)=> props.background};
         border-radius: 4px;
         padding: 15px 30px;
@@ -173,6 +178,7 @@ const Content = styled.div`
     }
     .book_img img{
         max-width: 100px;
+        border: 1px solid #F2F2F2;
     }
     .book_info{
         display:flex;
@@ -204,8 +210,7 @@ const Content = styled.div`
                 order: 1;
             }
             .me{
-                order: 0;
-            border: 20px solid rgba(0,0,0,0.9);
+            order: 0;
             height: 340px;
             width: 340px;
             border-radius: 50%;
@@ -247,7 +252,6 @@ const Content = styled.div`
             .skill{
                 padding: 5px 20px;
                 box-sizing:border-box;
-                border: 1px solid #202026;
                 border-radius: 4px;
                 font-size: 15px;
             }
@@ -287,7 +291,6 @@ const Content = styled.div`
         }
         .me{
             order: 0;
-            border: 20px solid rgba(0,0,0,0.9);
             height: auto;
             width: 100%;
             border-radius: 50%;
@@ -345,12 +348,11 @@ const Content = styled.div`
         .skill{
             padding: 5px;
             box-sizing:border-box;
-            border: 1px solid #202026;
             border-radius: 4px;
             font-size: 15px;
             margin: 0 auto 15px auto;
             width: 80%;
-            height: 180px;
+            height: 100%;
             text-align: center;
         }
         .book_info{
@@ -387,7 +389,6 @@ const Content = styled.div`
         }
         
         .info{
-            border: 1px solid #202026;
             border-radius: 4px;
             padding: 15px 30px;
             box-sizing:border-box;
@@ -402,7 +403,13 @@ function Profile(){
     const color = useSelector(state => state.color);
 
     return(
-        <Content background={color.bg2} color={color.font}>
+        <Content 
+            background={color.bg2} 
+            color={color.font} 
+            border={color.border} 
+            in={color.in}
+            out={color.out}
+        >
             <div className="profile">
                 <div className="intro_box">
                         <div className="intro">
@@ -421,11 +428,15 @@ function Profile(){
                             <div className="contact_git">
                                 <div className="email">
                                     <FontAwesomeIcon icon = {faEnvelope} size = "1x"/>
-                                    <span className="address">ggj920123@gmail.com</span>
+                                    <span className="address">
+                                        <a href="mailto:ggj920123@gmail.com">
+                                            ggj920123@gmail.com
+                                        </a>
+                                    </span>
                                 </div>
                                 <div className="git">
                                     <FontAwesomeIcon icon = {faGithubSquare} size = "1x"/>
-                                    <span className="address">https://github.com/ggj102</span>
+                                    <span className="address"><a href="https://github.com/ggj102" target="_blank" >https://github.com/ggj102</a></span>
                                 </div>
                             </div>
                         </div>
@@ -495,7 +506,11 @@ function Profile(){
                             <div className="info_title">fastcampas 프론트엔드(React) 올인원패키지</div>
                             <div className="date">2019.7 ~ 2019.11</div>
                             <ul>
-                                <li>- https://www.fastcampus.co.kr/dev_online_react</li>
+                                <li>
+                                    <a href="https://www.fastcampus.co.kr/dev_online_react" target="_blank">
+                                    - https://www.fastcampus.co.kr/dev_online_react
+                                    </a>
+                                </li>
                                 <li>- HTML/CSS</li>
                                 <li>- React</li>
                                 <li>- JavaScript</li>
@@ -526,14 +541,14 @@ function Profile(){
                                     <li>- 알고리즘 학습</li>
                                 </ul>
                             </div>
-                            <div className="book_info">
+                            {/* <div className="book_info">
                                 <div className="book_img">
                                     <img src={Book2} alt="img"/>
                                 </div>
                                 <ul>
                                     <li>- 타입스크립트를 활용한 포트폴리오 제작</li>
                                 </ul>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                     <div className="exp">

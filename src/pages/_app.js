@@ -47,34 +47,81 @@ const App = styled.div`
     .tab_focus{
         border-bottom: 2px solid ${(props)=> props.font};
     }
-    .dl_mode{
-        color: #fff;
-        display: flex;
-        font-size: 20px;
+    .toggle {
+        position: relative;
+        display: inline-block;
         margin: 25px;
         margin-right: 0;
-        border: 3px solid #000;
-        box-sizing: border-box;
-        width: 60px;
-        font-weight: bold;
     }
-    .dark{
-        width: 30px;
-        text-align: center;
-        line-height: 23px;
-        color: #000;
+    input {
+        height: 25px;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 44px;
+    }
+    .normal label {
+        background: #af4c4c;
+        border: 0.5px solid rgba(117, 117, 117, 0.31);
+        box-shadow: inset 0px 0px 4px 0px rgba(0, 0, 0, 0.2), 0 -3px 4px rgba(0, 0, 0, 0.15);
+    }
+    #normal:checked + label:before {
+        left: 23px;
+        content: '';
+        position: absolute;
+        background-color: #fff;
+    }
+    #normal:checked + label {
+        background: #000;
+    }
+    .normal label:before {
+        border: none;
+        width: 2.5em;
+        height: 2.5em;
+        box-shadow: inset 0.5px -1px 1px rgba(0, 0, 0, 0.35);
+        background: #fff;
+        transform: rotate(-25deg);
+        content: '';
+        position: absolute;
+    }
+    .normal label:after {
+        content: '';
+        position: absolute;
+        background: transparent;
+        height: calc(100% + 8px);
+        border-radius: 30px;
+        top: -5px;
+        width: calc(100% + 8px);
+        left: -4px;
+        z-index: 0;
+        box-shadow: inset 0px 2px 4px -2px rgba(0, 0, 0, 0.2), 0px 1px 2px 0px rgba(151, 151, 151, 0.2);
+    }
+    label.toggle-item {
+        width: 50px;
+        background: #fff;
+        height: 27px;
+        display: inline-block;
+        border-radius: 50px;
+        position: relative;
+        transition: all .3s ease;
+        transform-origin: 20% center;
         cursor: pointer;
     }
-    .light{
-        width: 30px;
-        text-align: center;
-        cursor: pointer;
-        line-height: 23px;
+    label.toggle-item:before {
+        display: block;
+        transition: all .2s ease;
+        width: 25px;
+        height: 25px;
+        top: -1px;
+        left: -2px;
+        border-radius: 2em;
+        border: 2px solid #88cf8f;
+        transition: .3s ease;
+        content: '';
+        position: absolute;
+        background-color: #000;
     }
-    .mode_focus{
-        background-color: #0bceaf;
-    }
-
     @media screen and (min-width: 481px) and (max-width: 1024px){
         .menu{
         max-width: 1140px;
@@ -119,14 +166,7 @@ const App = styled.div`
             text-align: center;
         }
         .tab_area{
-            display: flex;
-            float:left;
-            position:relative;
-            width: 100%;
-        }
-        .dl_mode{
-            position:absolute;
-            right: 0;
+            justify-content: flex-end;
         }
     }
 `
@@ -141,12 +181,14 @@ function myApp(props){
     const mode = useSelector(state => state.mode);
     const color = useSelector(state => state.color);
 
-    const onDark = () =>{
-        dispatch(gDark());
-    }
-    const onLight = () =>{
-        dispatch(gLight());
-        gLight();
+    const onMode = () =>{
+        console.log(mode);
+        if(mode !== "D")
+        {
+            dispatch(gDark());
+        }else{
+            dispatch(gLight());
+        }
     }
     
     return(
@@ -168,13 +210,9 @@ function myApp(props){
                             onClick={()=>Router.push('/page_Portfolio')}>
                                 포트폴리오
                             </div> 
-                            <div className="dl_mode">
-                                <div className={mode === "D" ? "dark mode_focus" : "dark"} onClick={()=>{onDark()}}>
-                                    D
-                                </div>
-                                <div className={mode === "L" ? "light mode_focus" : "light"} onClick={()=>{onLight()}}>
-                                    L
-                                </div>
+                            <div className="toggle normal"> 
+                                <input id="normal" type="checkbox" onClick={onMode}/>
+                                <label className="toggle-item" htmlFor="normal"></label>
                             </div>
                         </div>
                     </div>
