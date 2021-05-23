@@ -184,22 +184,22 @@ function Portfolio(){
     const pfList = imgArr.map((val,idx)=>{
         return(
             <li key={idx} className={idx%2 === 0 ? "item left" : "item right"}>
-                <img src={val} alt="img"/>
+                <a href={webAddress[idx]} target="_blank"><img src={val} alt="img" title="해당 페이지로 이동"/></a>
                 <div className="link_area">
                     <div className="pf_title">{nameArr[idx]}</div>
                     <div className="icon_area">
                         <div className="icon">
-                            <a href={gitAddress[idx]} target="_blank">
+                            <a href={gitAddress[idx]} target="_blank" title="github로 이동">
                                 <FontAwesomeIcon icon={faGithubSquare} size="2x"/>
                             </a> 
                         </div>
                         <div className="icon_center">
-                            <a href={webAddress[idx]} target="_blank">
+                            <a href={webAddress[idx]} target="_blank" title="해당 페이지로 이동">
                                 <FontAwesomeIcon icon={faHome} size="2x"/>
                             </a> 
                         </div>
                         <div className="icon">
-                            <a href={notionAddress[idx]} target="_blank">
+                            <a href={notionAddress[idx]} target="_blank" title="명세서 페이지로 이동">
                                 <FontAwesomeIcon icon={faFileAlt} size="2x"/>
                             </a> 
                         </div>
