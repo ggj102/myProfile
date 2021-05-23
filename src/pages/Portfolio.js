@@ -164,17 +164,20 @@ function Portfolio(){
     const gitAddress = [
         "https://github.com/ggj102/bookSearch",
         "https://github.com/ggj102/movieSearch",
-        "https://github.com/ggj102/portfolio_shoppingmall"
+        "https://github.com/ggj102/portfolio_shoppingmall",
+        "https://github.com/ggj102/weatherInfo"
     ];
     const webAddress = [
         "https://book-search-ochre.vercel.app/",
         "https://movie-search-one.vercel.app/",
-        "https://portfolio-shoppingmall.vercel.app/"
+        "https://portfolio-shoppingmall.vercel.app/",
+        "https://weather-info-theta.vercel.app/"
     ];
     const notionAddress = [
         "https://www.notion.so/BookSearch-3ab5402c3b6048958812f7ba2c0acc15",
         "https://www.notion.so/MovieSearch-7fc62b3721dd457b8a9fa10b2b6cba6b",
-        "https://www.notion.so/ShoppingMall-3952bf07c0ca4e07857ad8c8956af294"
+        "https://www.notion.so/ShoppingMall-3952bf07c0ca4e07857ad8c8956af294",
+        "https://www.notion.so/WeatherInfo-fec73f71f5dd422fb18c7202b6715b67"
     ]
     const color = useSelector(state => state.color);
 

@@ -9,8 +9,8 @@ const handle = app.getRequestHandler();
 app.prepare().then(()=>{
     const server = express();
 
-    server.get('/page_/:id', (req, res)=>{
-        res.redirect(`/page_${req.params.id}`);
+    server.get('/:id', (req, res)=>{
+        res.redirect(`/${req.params.id}`);
     });
     server.get('*', (req,res)=>{
         return handle(req,res);
@@ -18,6 +18,6 @@ app.prepare().then(()=>{
 
     server.listen(port, err =>{
         if(err) throw err;
-        console.log(`> Ready on http://localhost:${port}/page_Profile`);
+        console.log(`> Ready on http://localhost:${port}/Profile`);
     });
 });

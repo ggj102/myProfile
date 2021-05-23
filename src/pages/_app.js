@@ -197,17 +197,17 @@ function myApp(props){
                 <div className="header">
                     <div className="menu">
                         <div className="menu_title">
-                            {router.asPath === '/page_Profile' ? "Profile" : "Portfolio"}
+                            {router.asPath === '/Profile' ? "Profile" : "Portfolio"}
                         </div>
                         <div className="tab_area">
                                 <div 
-                                className = {router.asPath === '/page_Profile' ? "tab tab_focus" : "tab"} 
-                                onClick={()=>Router.push('/page_Profile')}>
+                                className = {router.asPath === '/Profile' ? "tab tab_focus" : "tab"} 
+                                onClick={()=>Router.push('/Profile')}>
                                     프로필
                                 </div>
                             <div 
-                            className = {router.asPath === '/page_Portfolio' ? "tab tab_focus" : "tab"} 
-                            onClick={()=>Router.push('/page_Portfolio')}>
+                            className = {router.asPath === '/Portfolio' ? "tab tab_focus" : "tab"} 
+                            onClick={()=>Router.push('/Portfolio')}>
                                 포트폴리오
                             </div> 
                             <div className="toggle normal"> 

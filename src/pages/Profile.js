@@ -493,7 +493,7 @@ function Profile(){
                         <div className="info">
                             <img className="book_img" src={Sbs} alt="img"/>
                             <div className="info_title">SBS게임아카데미 게임프로그래밍 과정 수료</div>
-                            <div className="date">2017.7 ~ 2018.7</div>
+                            <div className="date">2017.10 ~ 2018.10</div>
                             <ul>
                                 <li>- 12개월 과정</li>
                                 <li>- C언어를 이용하여 슈팅게임 개발</li>
@@ -504,7 +504,7 @@ function Profile(){
                         <div  className="info">
                             <img className="book_img" src={Fast} alt="img"/>
                             <div className="info_title">fastcampas 프론트엔드(React) 올인원패키지</div>
-                            <div className="date">2019.7 ~ 2019.11</div>
+                            <div className="date">2019.7 ~ 2019.10</div>
                             <ul>
                                 <li>
                                     <a href="https://www.fastcampus.co.kr/dev_online_react" target="_blank">
