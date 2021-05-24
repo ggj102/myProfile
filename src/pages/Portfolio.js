@@ -1,14 +1,12 @@
 import styled from 'styled-components';
-import Pf1 from "../../static/portfolio_img/pf1.png"
-import Pf2 from "../../static/portfolio_img/pf2.png"
-import Pf3 from "../../static/portfolio_img/pf3.png"
-import Pf4 from "../../static/portfolio_img/pf4.png"
-import Pf5 from "../../static/portfolio_img/pf5.png"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
 import { faHome } from "@fortawesome/free-solid-svg-icons";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons"
 import { useSelector } from 'react-redux';
+import { useEffect, useState } from 'react';
+import axios from 'axios';
+
 
 const Content = styled.div`
     a:link{text-decoration: none; color:${(props)=> props.color};}
@@ -159,47 +157,33 @@ const Content = styled.div`
 `
 
 function Portfolio(){
-    const imgArr = [Pf1,Pf2,Pf3,Pf4,Pf5];
-    const nameArr = ["BookSearch","MovieSearch","ShoppingMall","WeatherInfo","MyProfile"];
-    const gitAddress = [
-        "https://github.com/ggj102/bookSearch",
-        "https://github.com/ggj102/movieSearch",
-        "https://github.com/ggj102/portfolio_shoppingmall",
-        "https://github.com/ggj102/weatherInfo"
-    ];
-    const webAddress = [
-        "https://book-search-ochre.vercel.app/",
-        "https://movie-search-one.vercel.app/",
-        "https://portfolio-shoppingmall.vercel.app/",
-        "https://weather-info-theta.vercel.app/"
-    ];
-    const notionAddress = [
-        "https://www.notion.so/BookSearch-3ab5402c3b6048958812f7ba2c0acc15",
-        "https://www.notion.so/MovieSearch-7fc62b3721dd457b8a9fa10b2b6cba6b",
-        "https://www.notion.so/ShoppingMall-3952bf07c0ca4e07857ad8c8956af294",
-        "https://www.notion.so/WeatherInfo-fec73f71f5dd422fb18c7202b6715b67"
-    ]
     const color = useSelector(state => state.color);
-
-    const pfList = imgArr.map((val,idx)=>{
+    const [addressData,setAddressData] = useState([]);
+    useEffect(() => {
+        axios.get("/address.json").then((response)=>{
+            setAddressData(response.data);
+        })
+    });
+    
+    const pfList = addressData.map((val,idx)=>{
         return(
             <li key={idx} className={idx%2 === 0 ? "item left" : "item right"}>
-                <a href={webAddress[idx]} target="_blank"><img src={val} alt="img" title="해당 페이지로 이동"/></a>
+                <a href={val.web} target="_blank"><img src={val.img} alt="img" title="해당 페이지로 이동"/></a>
                 <div className="link_area">
-                    <div className="pf_title">{nameArr[idx]}</div>
+                    <div className="pf_title">{val.name}</div>
                     <div className="icon_area">
                         <div className="icon">
-                            <a href={gitAddress[idx]} target="_blank" title="github로 이동">
+                            <a href={val.git} target="_blank" title="github로 이동">
                                 <FontAwesomeIcon icon={faGithubSquare} size="2x"/>
                             </a> 
                         </div>
                         <div className="icon_center">
-                            <a href={webAddress[idx]} target="_blank" title="해당 페이지로 이동">
+                            <a href={val.web} target="_blank" title="해당 페이지로 이동">
                                 <FontAwesomeIcon icon={faHome} size="2x"/>
                             </a> 
                         </div>
                         <div className="icon">
-                            <a href={notionAddress[idx]} target="_blank" title="명세서 페이지로 이동">
+                            <a href={val.notion} target="_blank" title="명세서 페이지로 이동">
                                 <FontAwesomeIcon icon={faFileAlt} size="2x"/>
                             </a> 
                         </div>
