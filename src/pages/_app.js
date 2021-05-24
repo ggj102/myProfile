@@ -4,12 +4,15 @@ import  Router  from 'next/router';
 import {useDispatch, useSelector } from 'react-redux';
 import {gDark, gLight} from '../store/modules/GlobalData'
 import wrapper from '../store/modules/configureStore.js';
+import { config, dom } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 
 const GlobalStyle = createGlobalStyle`
     body{
         background-color: ${(props)=> props.backgroud};
         margin: 0;
-    }    
+    }
+    ${dom.css()}
 `
 
 const App = styled.div`
