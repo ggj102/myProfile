@@ -5,6 +5,9 @@ const Content = styled.div`
     a:visited{text-decoration: none; color:${(props)=> props.color};}
     a:active{text-decoration: none; color:${(props)=> props.color};}
     a:hover{text-decoration: none; color:${(props)=> props.color};}
+    .point_text{
+        color: #a97afd;
+    }
     ul{
         list-style:none;
         margin: 0;
@@ -94,9 +97,14 @@ const Content = styled.div`
         max-width: 400px;
     }
     .about_me_text{
+        margin-left: 20px;
         line-height: 24px;
         font-size: 16px;
         color:${(props)=> props.color}
+    }
+    .about_me_text .title
+    {
+        margin-left: 20px;
     }
     .skill_box{
         display: flex;
