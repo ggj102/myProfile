@@ -1,0 +1,42 @@
+[
+  {
+    "img": "../static/portfolio_img/pf3.png",
+    "name": "ShoppingMall",
+    "git": "https://github.com/ggj102/portfolio_shoppingmall",
+    "web": "https://portfolio-shoppingmall.vercel.app/",
+    "notion": "https://www.notion.so/ShoppingMall-3952bf07c0ca4e07857ad8c8956af294",
+    "explan": [
+      "ReactJS로 구현한 페이지",
+      "route를 이용하여 페이지 전환 구현",
+      "RESTful API를 이용한 통신작업",
+      "redux로 일부 상태관리"
+    ]
+  },
+  {
+    "img": "../static/portfolio_img/pf4.png",
+    "name": "WeatherInfo",
+    "git": "https://github.com/ggj102/weatherInfo",
+    "web": "https://weather-info-theta.vercel.app/",
+    "notion": "https://www.notion.so/WeatherInfo-fec73f71f5dd422fb18c7202b6715b67",
+    "explan": [
+      "ReactJS로 구현한 페이지",
+      "날씨 API연동",
+      "자동완성 검색기능 구현"
+    ]
+  },
+  {
+    "img": "../static/portfolio_img/pf5.png",
+    "name": "MyProfile",
+    "git": "https://github.com/ggj102/myProfile",
+    "web": "my-profile-rosy.vercel.app",
+    "notion": "https://www.notion.so/MyProfile-dc4405b63f954f6eaa5a2b5637dd1a66",
+    "explan": [
+      "NextJS로 구현한 페이지",
+      "styled-component의 특징인 props를 사용해 다크모드, 라이트모드 기능 구현",
+      "반응형 웹 구현",
+      "redux로 일부 상태관리",
+      "portfolio페이지 grid 적용",
+      "portfolio페이지 json data 통신 중 loading 구현"
+    ]
+  }
+]
