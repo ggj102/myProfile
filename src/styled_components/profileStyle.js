@@ -106,8 +106,8 @@ const Content = styled.div`
   .about_me img {
     max-width: 400px;
   }
-  .about_me_text {
-    margin-left: 20px;
+  .about_me_text_content {
+    margin-left: 40px;
     line-height: 24px;
     font-size: 16px;
     color: ${(props) => props.color};
@@ -125,9 +125,7 @@ const Content = styled.div`
       color: #2196f3;
     }
   }
-  .about_me_text .title {
-    margin-left: 20px;
-  }
+
   .skill_box {
     display: flex;
     justify-content: space-between;
@@ -161,17 +159,13 @@ const Content = styled.div`
   .devops {
     color: #2196f3;
   }
-  .exp_edu {
-    display: flex;
-    justify-content: space-between;
-  }
-  .exp {
-    width: 47%;
-  }
-  .edu {
-    width: 47%;
+  .career {
+    /* display: flex; */
+    /* justify-content: space-between; */
   }
   .info {
+    position: relative;
+
     border: 1px solid ${(props) => props.border};
     background-color: ${(props) => props.background};
     border-radius: 4px;
@@ -179,20 +173,73 @@ const Content = styled.div`
     box-sizing: border-box;
     margin-bottom: 20px;
     line-height: 25px;
+
+    .point_text {
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .content_list {
+      height: 900px;
+      overflow: auto;
+      margin-top: 60px;
+      color: ${(props) => props.color};
+      li {
+        margin-bottom: 25px;
+      }
+
+      .explan_list {
+        margin-top: 5px;
+        list-style: disc;
+
+        .point_text {
+          color: #ffa500;
+          font-weight: bold;
+          font-size: 16px;
+        }
+
+        li {
+          margin-bottom: 0;
+        }
+      }
+    }
   }
   .date {
     color: ${(props) => props.color};
   }
-  .info ul {
-    margin-top: 20px;
-    color: ${(props) => props.color};
-  }
+
   .info_title {
     color: #0bceaf;
-    margin: 5px 0;
+    padding: 5px 0 15px 0;
     font-size: 20px;
     font-weight: bold;
+    border-bottom: 1px solid;
   }
+
+  .tab_wrapper {
+    position: absolute;
+    color: #0bceaf;
+    border-bottom: 1px solid;
+    padding: 5px 0 15px 0;
+
+    button {
+      border: 0;
+      outline: 0;
+      cursor: pointer;
+      font-size: 20px;
+      padding: 0;
+      margin-right: 15px;
+    }
+
+    .current_tab {
+      color: #0bceaf;
+    }
+
+    button :last-child {
+      margin-right: 0;
+    }
+  }
+
   .book_img img {
     max-width: 100px;
     border: 1px solid #f2f2f2;
@@ -251,15 +298,19 @@ const Content = styled.div`
       text-align: center;
       margin-bottom: 0;
     }
+    .title {
+      text-align: center;
+    }
     .about_me {
       display: block;
       text-align: center;
     }
-    .about_me_text {
+    .about_me_text_content {
       line-height: 24px;
       font-size: 16px;
+      margin-left: 0;
     }
-    .about_me_text .title {
+    .about_me_text_content .title {
       margin-top: 40px;
     }
     .skill_title {
@@ -336,19 +387,23 @@ const Content = styled.div`
       text-align: center;
       margin-bottom: 0;
     }
+    .title {
+      text-align: center;
+    }
     .about_me {
       display: block;
       text-align: center;
     }
-    .about_me_text {
+    .about_me_text_content {
       line-height: 24px;
       font-size: 16px;
+      margin-left: 0;
     }
     .about_me img {
       max-width: 400px;
       width: 100%;
     }
-    .about_me_text .title {
+    .about_me_text_content .title {
       margin-top: 40px;
     }
     .skill_box {
@@ -383,21 +438,11 @@ const Content = styled.div`
       padding: 0;
       margin: 0;
     }
-    .exp_edu {
+    .career {
       display: flex;
       flex-direction: column;
     }
-    .exp_edu .title {
-      text-align: center;
-    }
-    .exp {
-      width: 80%;
-      margin: 0 auto;
-    }
-    .exp .title {
-      margin-top: 150px;
-    }
-    .edu {
+    .career_item {
       width: 80%;
       margin: 0 auto;
     }
@@ -412,8 +457,6 @@ const Content = styled.div`
   }
 `;
 
-function Contents({ children, ...rest }) {
+export default function ProfileContents({ children, ...rest }) {
   return <Content {...rest}>{children}</Content>;
 }
-
-export default Contents;
