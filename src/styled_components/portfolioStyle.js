@@ -54,7 +54,7 @@ const Content = styled.div`
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
     row-gap: 20px;
-    padding: 150px 85px 0 85px;
+    padding: 10rem 4rem 6rem 4rem;
     margin: 0 auto;
     max-width: 1140px;
     box-sizing: border-box;
@@ -103,16 +103,6 @@ const Content = styled.div`
   .icon_center {
     margin: 0 10px;
   }
-  @media screen and (min-width: 481px) and (max-width: 1024px) {
-    .portfolio {
-      padding: 150px 25px 0 25px;
-      margin: 0 auto;
-      max-width: 1140px;
-      box-sizing: border-box;
-      color: #fff;
-      font-size: 16px;
-    }
-  }
   .explan_list {
     list-style: disc;
     padding-left: 23px;
@@ -120,6 +110,7 @@ const Content = styled.div`
   @media screen and (min-width: 481px) and (max-width: 850px) {
     .portfolio {
       padding: 0 25px;
+      padding-bottom: 50px;
       margin: 0 auto;
       max-width: 1140px;
       box-sizing: border-box;
@@ -145,24 +136,20 @@ const Content = styled.div`
       border-radius: 10px;
     }
   }
-  @media screen and (max-width: 480px) {
+  @media screen and (max-width: 670px) {
     .portfolio {
       padding: 0 25px;
+      padding-bottom: 50px;
       margin: 0 auto;
       max-width: 1140px;
       box-sizing: border-box;
       color: #fff;
       font-size: 16px;
+      grid-template-columns: 1fr;
     }
-    .left {
-      float: none;
-    }
-    .right {
-      float: none;
-    }
+
     .item {
       width: 100%;
-
       margin-bottom: 30px;
       box-sizing: border-box;
       padding: 10px;
