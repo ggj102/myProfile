@@ -164,8 +164,6 @@ const Content = styled.div`
     /* justify-content: space-between; */
   }
   .info {
-    position: relative;
-
     border: 1px solid ${(props) => props.border};
     background-color: ${(props) => props.background};
     border-radius: 4px;
@@ -173,6 +171,7 @@ const Content = styled.div`
     box-sizing: border-box;
     margin-bottom: 20px;
     line-height: 25px;
+    /* position: relative; */
 
     .point_text {
       font-weight: bold;
@@ -180,23 +179,26 @@ const Content = styled.div`
     }
 
     .content_list {
-      height: 900px;
-      overflow: auto;
-      margin-top: 60px;
+      margin-top: 20px;
       color: ${(props) => props.color};
       li {
         margin-bottom: 25px;
       }
 
-      .explan_list {
+      .sub_list {
         margin-top: 5px;
-        list-style: disc;
-
+        margin-bottom: 20px;
+        padding-left: 20px;
         .point_text {
           color: #ffa500;
           font-weight: bold;
           font-size: 16px;
         }
+      }
+
+      .explan_list {
+        list-style: disc;
+        padding-left: 30px;
 
         li {
           margin-bottom: 0;
@@ -217,7 +219,8 @@ const Content = styled.div`
   }
 
   .tab_wrapper {
-    position: absolute;
+    position: sticky;
+    top: 0;
     color: #0bceaf;
     border-bottom: 1px solid;
     padding: 5px 0 15px 0;

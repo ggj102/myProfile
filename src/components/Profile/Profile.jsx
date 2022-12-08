@@ -80,7 +80,7 @@ export default function Profile() {
           </div>
         </div>
         <div className="skills area">
-          <div className="title">기술스택</div>
+          <div className="title">기술</div>
           <div className="skill_box">
             <div className="skill">
               <div className="skill_title language">Language</div>
@@ -112,7 +112,7 @@ export default function Profile() {
         </div>
         <div className="career area">
           <div className="career_item">
-            <div className="title">경력기술서 </div>
+            <div className="title">경력</div>
             <CareerDescription />
           </div>
         </div>
