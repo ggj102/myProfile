@@ -7,6 +7,7 @@ export default function Develop({ isCurrent }) {
         <li>
           <span className="point_text">개요</span>
           <ul className="explan_list">
+            <li>NextJS, Typescript 기반의 프로젝트</li>
             <li>노하드 시스템 관리 페이지</li>
             <li>차트로 리소스 사용량 확인</li>
             <li>PC클라이언트 모니터링 및 제어</li>
@@ -19,14 +20,6 @@ export default function Develop({ isCurrent }) {
             <li>대시보드, 로그인 페이지 구현</li>
             <li>jwt방식의 인증/인가 구현</li>
             <li>API 연동</li>
-          </ul>
-        </li>
-        <li>
-          <span className="point_text">주요 기술</span>
-          <ul className="explan_list">
-            <li>NextJS, Typescript, SWR, redux, emotion, jest</li>
-            <li>react-virtuoso, reCharts</li>
-            <li>husky, lintstage, eslint, prettier</li>
           </ul>
         </li>
         <li>
@@ -47,17 +40,6 @@ export default function Develop({ isCurrent }) {
             <span className="point_text">컴포넌트 재사용성 향상</span>
             <ul className="explan_list">
               <li>유사한 로직의 컴포넌트를 통합하여 재사용성 향상</li>
-            </ul>
-          </div>
-          <div className="sub_list">
-            <span className="point_text">비효율적 최적화 로직</span>
-            <ul className="explan_list">
-              <li>기존 로직은 useCallback, useMemo가 남용</li>
-              <li>
-                개발 단계의 useCallback, useMemo는 불필요한 리소스 낭비가 발생
-              </li>
-              <li>비효율이라 판단하여 반드시 필요한 부분을 제외하고 삭제</li>
-              <li>추후 최적화 단계에서 적용해야 한다고 판단</li>
             </ul>
           </div>
           <div className="sub_list">

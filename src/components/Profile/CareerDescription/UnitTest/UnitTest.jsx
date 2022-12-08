@@ -7,6 +7,7 @@ export default function UnitTest({ isCurrent }) {
         <li>
           <span className="point_text">개요</span>
           <ul className="explan_list">
+            <li>Jest를 사용한 유닛테스트</li>
             <li>노하드 시스템 관리 페이지에 유닛테스트 시범 적용</li>
           </ul>
         </li>
@@ -15,12 +16,6 @@ export default function UnitTest({ isCurrent }) {
           <ul className="explan_list">
             <li>유닛테스트 시범 적용을 하며 테스트 메뉴얼 구축</li>
             <li>여러가지 테스트 시행으로 테스트 가능 범위 연구</li>
-          </ul>
-        </li>
-        <li>
-          <span className="point_text">주요 기술스택</span>
-          <ul className="explan_list">
-            <li>jest, testing-library</li>
           </ul>
         </li>
         <li>

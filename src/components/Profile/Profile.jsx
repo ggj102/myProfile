@@ -64,7 +64,7 @@ export default function Profile() {
             <div className="about_me_text">
               현 프론트엔드 개발자로{" "}
               <span className="point_orange">프로젝트 개발 및 유지 보수</span>를
-              맡고 있으며 NextJS를 기반으로 typescript와 javascirpt로 작성된
+              맡고 있으며 NextJS를 기반으로 Typescript와 Javascirpt로 작성된
               각각의 프로젝트를 담당하고 있습니다.
               <br />
               <span className="point_blue">유닛테스트</span> 적용과{" "}
@@ -79,41 +79,112 @@ export default function Profile() {
             </div>
           </div>
         </div>
-        <div className="skills area">
+        {/* <div className="skills area">
           <div className="title">기술</div>
           <div className="skill_box">
             <div className="skill">
               <div className="skill_title language">Language</div>
-              <ul>
-                <li>- Typescript, Javascript</li>
-                <li>- HTML, CSS, SCSS</li>
-                <li>- C , C++ , C#</li>
+              <ul className="skill_language">
+                <li>
+                  <span>Typescript</span>
+                  <span>Javascript</span>
+                </li>
+                <li>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>SCSS</span>
+                </li>
+                <li>
+                  <span>C</span>
+                  <span>C++</span>
+                  <span>C#</span>
+                </li>
               </ul>
             </div>
             <div className="skill">
               <div className="skill_title library">Library & Frameworks</div>
-              <ul>
-                <li>- ReactJS, NextJS</li>
-                <li>- Redux, SWR, Axios, Jest</li>
-                <li>- emotion, styled-component</li>
-                <li>- yup, react-virtuoso, rechart</li>
-                <li>- eslint, prettier, lint-staged, husky</li>
+              <ul className="skill_library">
+                <li>
+                  <span>ReactJS</span>
+                  <span>NextJS</span>
+                  <span>SCSS</span>
+                </li>
+                <li>
+                  <span>Redux</span>
+                  <span>SWR</span>
+                  <span>Axios</span>
+                  <span>Jest</span>
+                </li>
+                <li>
+                  <span>emotion</span>
+                  <span>styled-component</span>
+                  <span>Axios</span>
+                  <span>Jest</span>
+                </li>
+                <li>
+                  <span>yup</span>
+                  <span>react-virtuoso</span>
+                  <span>rechart</span>
+                </li>
+                <li>
+                  <span>eslint</span>
+                  <span>prettier</span>
+                  <span>lint-staged</span>
+                  <span>husky</span>
+                </li>
               </ul>
             </div>
             <div className="skill">
-              <div className="skill_title devops">ETC</div>
-              <ul>
-                <li>- slack</li>
-                <li>- gitlab</li>
-                <li>- github</li>
+              <div className="skill_title ETC">ETC</div>
+              <ul className="skill_ETC">
+                <li>slack</li>
+                <li>gitlab</li>
+                <li>github</li>
               </ul>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="career area">
           <div className="career_item">
             <div className="title">경력</div>
             <CareerDescription />
+          </div>
+        </div>
+        <div className="career area">
+          <div className="career_item">
+            <div className="title">기타 이력</div>
+            <div className="info">
+              <ul className="content_list">
+                <li>
+                  <span className="point_text">경험</span>
+                  <ul className="explan_list">
+                    <li>
+                      프로그래밍을 접하기 전 5년간 아르바이트 및 파견 근무로
+                      사회생활 경험
+                    </li>
+                    <li>게임 프로그래밍 1년 과정으로 프로그래밍 입문</li>
+                    <li>
+                      현직 프론트엔드 지인을 멘토로 하여 2년간 웹 프로그래밍
+                      공부 및 포트폴리오를 개발
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <span className="point_text">자격증</span>
+                  <ul className="explan_list">
+                    <li>정보처리 산업기사</li>
+                    <li>네트워크 관리사 2급</li>
+                    <li>컴퓨터 활용능력 2급</li>
+                  </ul>
+                </li>
+                <li>
+                  <span className="point_text">학력</span>
+                  <ul className="explan_list">
+                    <li>2023년 2월 학점은행제 컴퓨터 공학 학사학위 취득예정</li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>

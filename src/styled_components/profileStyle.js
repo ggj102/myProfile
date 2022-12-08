@@ -148,7 +148,14 @@ const Content = styled.div`
     color: ${(props) => props.color};
   }
   .skill li {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+
+    span {
+      font-weight: bold;
+      padding: 3px 5px;
+      margin-right: 5px;
+      border-radius: 6px;
+    }
   }
   .language {
     color: #ffa500;
@@ -156,9 +163,31 @@ const Content = styled.div`
   .library {
     color: #a97afd;
   }
-  .devops {
+  .ETC {
     color: #2196f3;
   }
+
+  .skill_language {
+    span {
+      border: 1px solid #ffa500;
+      background-color: #ffa500;
+    }
+  }
+
+  .skill_library {
+    span {
+      border: 1px solid #a97afd;
+      background-color: #a97afd;
+    }
+  }
+
+  .skill_ETC {
+    span {
+      border: 1px solid #2196f3;
+      background-color: #2196f3;
+    }
+  }
+
   .career {
     /* display: flex; */
     /* justify-content: space-between; */

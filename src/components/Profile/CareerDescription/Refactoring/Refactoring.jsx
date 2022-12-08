@@ -7,6 +7,7 @@ export default function Refactoring({ isCurrent }) {
         <li>
           <span className="point_text">개요</span>
           <ul className="explan_list">
+            <li>NextJS, Javascript 기반의 프로젝트</li>
             <li>비트코인 채굴 관리 페이지</li>
             <li>마이닝 풀 허브에서 제공하는 api를 차트로 그려 채굴량 확인</li>
             <li>채굴 PC의 제어와 채굴 관리 설정 </li>
@@ -19,14 +20,6 @@ export default function Refactoring({ isCurrent }) {
             <li>클래스형 컴포넌트를 함수형으로 전환</li>
             <li>UI/UX 개선</li>
             <li>코드 최적화</li>
-          </ul>
-        </li>
-        <li>
-          <span className="point_text">주요 기술</span>
-          <ul className="explan_list">
-            <li>NextJs, Javascript, scss</li>
-            <li>axios, redux 및 미들웨어</li>
-            <li>eslint, prettier</li>
           </ul>
         </li>
         <li>
