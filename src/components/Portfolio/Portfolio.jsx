@@ -57,15 +57,6 @@ export default function Portfolio() {
                       <FontAwesomeIcon icon={faHome} size="2x" />
                     </a>
                   </div>
-                  <div className="icon">
-                    <a
-                      href={notion}
-                      target="_blank"
-                      title="명세서 페이지로 이동"
-                    >
-                      <FontAwesomeIcon icon={faFileAlt} size="2x" />
-                    </a>
-                  </div>
                 </div>
               </div>
               <ul className="explan_list">
