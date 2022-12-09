@@ -96,19 +96,23 @@ const Content = styled.div`
     color: ${(props) => props.color};
   }
 
+  .accordion_btn {
+    border: 0;
+    outline: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .display_none {
+    display: none;
+  }
+
   .profile_content {
-    margin-bottom: 150px;
+    margin-bottom: 50px;
   }
-  .about_me {
-    display: flex;
-    justify-content: space-between;
-  }
-  .about_me img {
-    max-width: 400px;
-  }
-  .about_me_text_content {
-    margin-left: 40px;
-    line-height: 24px;
+
+  .about_me_text {
+    margin: 20px 0;
     font-size: 16px;
     color: ${(props) => props.color};
 
@@ -126,81 +130,13 @@ const Content = styled.div`
     }
   }
 
-  .skill_box {
-    display: flex;
-    justify-content: space-between;
-  }
-  .skill_title {
-    font-weight: bold;
-    font-size: 20px;
-  }
-  .skill {
-    padding: 10px 30px;
-    box-sizing: border-box;
-    border: 1px solid ${(props) => props.border};
-    border-radius: 4px;
-    background-color: ${(props) => props.background};
-    font-size: 15px;
-    width: 32%;
-  }
-  .skill ul {
-    margin-top: 20px;
-    color: ${(props) => props.color};
-  }
-  .skill li {
-    margin-bottom: 15px;
-
-    span {
-      font-weight: bold;
-      padding: 3px 5px;
-      margin-right: 5px;
-      border-radius: 6px;
-    }
-  }
-  .language {
-    color: #ffa500;
-  }
-  .library {
-    color: #a97afd;
-  }
-  .ETC {
-    color: #2196f3;
-  }
-
-  .skill_language {
-    span {
-      border: 1px solid #ffa500;
-      background-color: #ffa500;
-    }
-  }
-
-  .skill_library {
-    span {
-      border: 1px solid #a97afd;
-      background-color: #a97afd;
-    }
-  }
-
-  .skill_ETC {
-    span {
-      border: 1px solid #2196f3;
-      background-color: #2196f3;
-    }
-  }
-
-  .career {
-    /* display: flex; */
-    /* justify-content: space-between; */
-  }
   .info {
     border: 1px solid ${(props) => props.border};
     background-color: ${(props) => props.background};
     border-radius: 4px;
     padding: 15px 30px;
     box-sizing: border-box;
-    margin-bottom: 20px;
     line-height: 25px;
-    /* position: relative; */
 
     .point_text {
       font-weight: bold;
@@ -257,43 +193,6 @@ const Content = styled.div`
     border-bottom: 1px solid;
   }
 
-  .tab_wrapper {
-    position: sticky;
-    top: 0;
-    color: #0bceaf;
-    border-bottom: 1px solid;
-    padding: 5px 0 15px 0;
-
-    button {
-      border: 0;
-      outline: 0;
-      cursor: pointer;
-      font-size: 20px;
-      padding: 0;
-      margin-right: 15px;
-    }
-
-    .current_tab {
-      color: #0bceaf;
-    }
-
-    button :last-child {
-      margin-right: 0;
-    }
-  }
-
-  .book_img img {
-    max-width: 100px;
-    border: 1px solid #f2f2f2;
-  }
-  .book_info {
-    display: flex;
-    margin-top: 30px;
-  }
-  .book_info ul {
-    margin: 0;
-    margin-left: 20px;
-  }
   @media screen and (min-width: 481px) and (max-width: 1024px) {
     .profile {
       padding: 0 25px;
@@ -342,41 +241,6 @@ const Content = styled.div`
     }
     .title {
       text-align: center;
-    }
-    .about_me {
-      display: block;
-      text-align: center;
-    }
-    .about_me_text_content {
-      line-height: 24px;
-      font-size: 16px;
-      margin-left: 0;
-    }
-    .about_me_text_content .title {
-      margin-top: 40px;
-    }
-    .skill_title {
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .skill {
-      padding: 5px 20px;
-      box-sizing: border-box;
-      border-radius: 4px;
-      font-size: 15px;
-    }
-    .book_info {
-      display: block;
-      margin-top: 30px;
-    }
-    .book_img {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    .book_info ul {
-      text-align: center;
-      padding: 0;
-      margin: 0;
     }
   }
   @media screen and (max-width: 480px) {
@@ -431,58 +295,6 @@ const Content = styled.div`
     }
     .title {
       text-align: center;
-    }
-    .about_me {
-      display: block;
-      text-align: center;
-    }
-    .about_me_text_content {
-      line-height: 24px;
-      font-size: 16px;
-      margin-left: 0;
-    }
-    .about_me img {
-      max-width: 400px;
-      width: 100%;
-    }
-    .about_me_text_content .title {
-      margin-top: 40px;
-    }
-    .skill_box {
-      display: flex;
-      flex-direction: column;
-    }
-    .skill_title {
-      margin-left: 5px;
-      font-weight: bold;
-      font-size: 20px;
-    }
-    .skill {
-      padding: 5px;
-      box-sizing: border-box;
-      border-radius: 4px;
-      font-size: 15px;
-      margin: 0 auto 15px auto;
-      width: 80%;
-      height: 100%;
-      text-align: center;
-    }
-    .book_info {
-      display: block;
-      margin-top: 30px;
-    }
-    .book_img {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-    .book_info ul {
-      text-align: center;
-      padding: 0;
-      margin: 0;
-    }
-    .career_item {
-      width: 80%;
-      margin: 0 auto;
     }
 
     .info {

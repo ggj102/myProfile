@@ -1,6 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 
-import Career from "./Career/Career";
 import Develop from "./Develop";
 import Refactoring from "./Refactoring";
 import UnitTest from "./UnitTest";
