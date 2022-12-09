@@ -63,15 +63,15 @@ export default function Profile() {
               맡고 있으며 <br /> NextJS를 기반으로 Typescript와 Javascirpt로
               작성된 각각의 프로젝트를 담당하고 있습니다.
               <br />
-              <span className="point_blue">유닛테스트</span> 적용과{" "}
-              <span className="point_blue">프로젝트 리팩토링</span>
-              작업을 하였으며
+              <span className="point_blue">유닛 테스트</span> 적용과{" "}
+              <span className="point_blue">프로젝트 리팩토링</span> 작업을
+              하였으며
               <br />
               차트, 테이블, 유효성 검사 등{" "}
               <span className="point_purple">여러 라이브러리</span> 사용에
               익숙한 편입니다.
               <br />
-              1년이 조금 넘는 개발 업무를 하며 업무에 대한 적성이 맞다는 것을
+              1년이 조금 넘는 개발 업무를 하며 업무에 대한 적성이 맞는다는 것을
               확신했으며
               <br /> 그렇기에 개발자로서 더 성장하고 많은 경험을 쌓아 발전하고
               싶습니다.
@@ -87,7 +87,7 @@ export default function Profile() {
                 <ul className="explan_list">
                   <li>기간: 2021.09.06 ~ 재직 중</li>
                   <li>포지션: 사원 / 프론트 엔드 개발자</li>
-                  <li>업무: 프로젝트 개발 및 유지보수</li>
+                  <li>업무: 프로젝트 개발 및 유지 보수</li>
                 </ul>
               </li>
             </ul>

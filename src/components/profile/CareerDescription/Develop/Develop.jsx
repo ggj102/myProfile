@@ -10,9 +10,9 @@ export default function Develop() {
           <span className="point_text">개요</span>
           <ul className="explan_list">
             <li>차트로 리소스 사용량 확인</li>
-            <li>PC클라이언트 모니터링 및 제어</li>
+            <li>PC 클라이언트 모니터링 및 제어</li>
             <li>NextJS, Typescript 기반의 프로젝트</li>
-            <li>개발중단되었던 프로젝트를 이어서 개발</li>
+            <li>개발이 중단되었던 프로젝트를 이어서 개발</li>
           </ul>
         </li>
         <li>
@@ -38,7 +38,7 @@ export default function Develop() {
               <span className="point_text">대시보드 페이지 구현</span>
               <ul className="explan_list">
                 <li>Recharts 라이브러리를 이용하여 리소스 사용량 차트 구현</li>
-                <li>gauge 차트는 RadialBarChart를 커스텀하여 적용</li>
+                <li>gauge 차트는 RadialBarChart를 커스텀 하여 적용</li>
                 <li>brush 기능을 이용하여 특정 구간을 조절할 수 있도록 구현</li>
                 <li>
                   범례 기능을 커스텀 하여 클릭 시 그래프 활성/비활성화 기능 구현

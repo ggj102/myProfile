@@ -38,7 +38,7 @@ export default function Refactoring() {
               <span className="point_text">함수형 컴포넌트 전환</span>
               <ul className="explan_list">
                 <li>
-                  클래스형 기반 컴포넌트를 리엑트에서 권고하는 함수형 컴포넌트
+                  클래스형 기반 컴포넌트를 리액트에서 권고하는 함수형 컴포넌트
                   기반으로 전환
                 </li>
                 <li>React-hooks을 이용해 life cycle 로직을 구현</li>
