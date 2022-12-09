@@ -11,7 +11,7 @@ export default function Accordion({ title, children }) {
     <>
       <button className="accordion_btn" onClick={onClickAccordion}>
         <span className="point_text">{title}</span>
-        <FontAwesomeIcon icon="fa-triangle" size="2x" />
+        {/* <FontAwesomeIcon icon="fa-triangle" size="2x" /> */}
       </button>
       <div className={isOpen ? "" : "display_none"}>{children}</div>
     </>
