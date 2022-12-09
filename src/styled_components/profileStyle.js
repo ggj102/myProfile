@@ -96,7 +96,7 @@ const Content = styled.div`
     color: ${(props) => props.color};
   }
 
-  .area {
+  .profile_content {
     margin-bottom: 150px;
   }
   .about_me {
@@ -207,11 +207,21 @@ const Content = styled.div`
       font-size: 20px;
     }
 
+    .CareerDescription_content {
+      padding: 20px 0;
+      .content_title {
+        font-size: 25px;
+        font-weight: bold;
+        color: #0bceaf;
+      }
+    }
+
     .content_list {
       margin-top: 20px;
       color: ${(props) => props.color};
+
       li {
-        margin-bottom: 25px;
+        margin-bottom: 20px;
       }
 
       .sub_list {
@@ -469,10 +479,6 @@ const Content = styled.div`
       text-align: center;
       padding: 0;
       margin: 0;
-    }
-    .career {
-      display: flex;
-      flex-direction: column;
     }
     .career_item {
       width: 80%;
