@@ -1,4 +1,5 @@
 import React from "react";
+import Accordion from "../../../common/Accordion";
 
 export default function Refactoring() {
   return (
@@ -23,8 +24,7 @@ export default function Refactoring() {
           </ul>
         </li>
         <li>
-          <span className="point_text">상세 작업 사항</span>
-          <ul className="explan_list">
+          <Accordion title="상세 작업 사항">
             <div className="sub_list">
               <span className="point_text">컴포넌트 구조 개선</span>
               <ul className="explan_list">
@@ -59,7 +59,7 @@ export default function Refactoring() {
                 <li>기능 개선 및 추가/삭제</li>
               </ul>
             </div>
-          </ul>
+          </Accordion>
         </li>
       </ul>
     </div>
