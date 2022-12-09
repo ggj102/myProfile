@@ -1,6 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from "react";
+import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
+import { faCaretUp } from "@fortawesome/free-solid-svg-icons";
 
 export default function Accordion({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +12,11 @@ export default function Accordion({ title, children }) {
     <>
       <button className="accordion_btn" onClick={onClickAccordion}>
         <span className="point_text">{title}</span>
-        {/* <FontAwesomeIcon icon="fa-triangle" size="2x" /> */}
+        <FontAwesomeIcon
+          className="accordion_icon"
+          icon={isOpen ? faCaretUp : faCaretDown}
+          size="2x"
+        />
       </button>
       <div className={isOpen ? "" : "display_none"}>{children}</div>
     </>

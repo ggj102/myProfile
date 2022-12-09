@@ -104,6 +104,11 @@ const Content = styled.div`
     padding: 0;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0);
+
+    .accordion_icon {
+      color: #a97afd;
+      margin-left: 10px;
+    }
   }
 
   .display_none {
