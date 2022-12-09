@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithubSquare } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope } from "@fortawesome/free-solid-svg-icons";
 import Me from "../../../static/profile_img/me2.png";
-import About from "../../../static/profile_img/about_me.png";
 import { useSelector } from "react-redux";
 import ProfileContents from "../../styled_components/profileStyle";
 import CareerDescription from "./CareerDescription";
@@ -61,18 +60,21 @@ export default function Profile() {
             <div className="about_me_text">
               현 프론트엔드 개발자로{" "}
               <span className="point_orange">프로젝트 개발 및 유지 보수</span>를
-              맡고 있으며 NextJS를 기반으로 Typescript와 Javascirpt로 작성된
-              각각의 프로젝트를 담당하고 있습니다.
+              맡고 있으며 <br /> NextJS를 기반으로 Typescript와 Javascirpt로
+              작성된 각각의 프로젝트를 담당하고 있습니다.
               <br />
               <span className="point_blue">유닛테스트</span> 적용과{" "}
               <span className="point_blue">프로젝트 리팩토링</span>
-              작업을 하였으며 차트, 테이블, 유효성 검사 등{" "}
+              작업을 하였으며
+              <br />
+              차트, 테이블, 유효성 검사 등{" "}
               <span className="point_purple">여러 라이브러리</span> 사용에
               익숙한 편입니다.
               <br />
               1년이 조금 넘는 개발 업무를 하며 업무에 대한 적성이 맞다는 것을
-              확신했으며 그렇기에 개발자로서 더 성장하고 많은 경험을 쌓아
-              발전하고 싶습니다.
+              확신했으며
+              <br /> 그렇기에 개발자로서 더 성장하고 많은 경험을 쌓아 발전하고
+              싶습니다.
             </div>
           </div>
         </div>
