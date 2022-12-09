@@ -106,6 +106,7 @@ const Content = styled.div`
   .explan_list {
     list-style: disc;
     padding-left: 23px;
+    color: ${(props) => props.color};
   }
   @media screen and (min-width: 481px) and (max-width: 850px) {
     .portfolio {

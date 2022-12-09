@@ -36,9 +36,11 @@ const Content = styled.div`
   }
   .intro_box {
     display: flex;
-    height: 100vh;
+    /* height: 100vh; */
     justify-content: space-between;
     align-items: center;
+
+    padding: 150px 0;
   }
   .wish {
     color: #2196f3;
@@ -101,6 +103,7 @@ const Content = styled.div`
     outline: 0;
     padding: 0;
     cursor: pointer;
+    background-color: rgba(0, 0, 0, 0);
   }
 
   .display_none {
