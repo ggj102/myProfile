@@ -36,7 +36,7 @@ export default function Portfolio() {
     <PortfolioContents background={color.bg2} color={color.font}>
       <div className="portfolio">
         {portfolioData.map((val, idx) => {
-          const { img, name, git, web, notion, explan } = val;
+          const { img, name, git, web, explan } = val;
 
           return (
             <div key={idx} className="item">

@@ -315,6 +315,6 @@ const Content = styled.div`
   }
 `;
 
-export default function ProfileContents({ children, ...rest }) {
-  return <Content {...rest}>{children}</Content>;
+export default function ProfileContents({ children, ...props }) {
+  return <Content {...props}>{children}</Content>;
 }
